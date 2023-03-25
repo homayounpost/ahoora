@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>نمایش نام و نام خانوادگی</title>
+</head>
+<body>
+	<form>
+		<label for="first-name">نام: </label>
+		<input type="text" id="first-name" name="first-name"><br><br>
+		<label for="last-name">نام خانوادگی: </label>
+		<input type="text" id="last-name" name="last-name"><br><br>
+		<input type="button" value="نمایش" onclick="displayFullName()">
+	</form>
+
+	<p id="full-name"></p>
+
+	<script>
+		function displayFullName() {
+			var firstName = document.getElementById("first-name").value;
+			var lastName = document.getElementById("last-name").value;
+			var fullName = "نام کامل شما: " + firstName + " " + lastName;
+			document.getElementById("full-name").innerHTML = fullName;
+		}
+	</script>
+</body>
+</html>
